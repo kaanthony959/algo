@@ -4,7 +4,7 @@ def fib(n: int) -> int:
     res = fib(n - 1) + fib(n - 2)
     return res
 
-def fib_tail(n, a, b): #a: n - 1, b: n - 2
+def fib_tail(n, a, b): #a: n = 1, b: n = 2
     if n == 1:
         return a
     if n == 2:
