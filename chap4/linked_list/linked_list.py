@@ -22,6 +22,15 @@ def access(head: ListNode, index: int) -> ListNode | None:
         head = head.next
     return head
 
+def find(head: ListNode, target: int) -> int:
+    index = 0
+    while head:
+        if head.val == target:
+            return index
+        head = head.next
+        index += 1
+    return -1
+
 if __name__ == "__main__":
     n0 = ListNode(1)
     n1 = ListNode(3)
@@ -37,7 +46,10 @@ if __name__ == "__main__":
     p = ListNode(0)
     insert(n0, p)
 
-    delete(p)
+    delete(n0)
 
-    acc_res = access(n0, 3)
+    acc_res = access(n0, 1)
     print(f"access result: {acc_res.val}")
+
+    find_res = find(n0, 2)
+    print(f"find result: {find_res}")
